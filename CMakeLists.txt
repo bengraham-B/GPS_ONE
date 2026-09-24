@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 26)
 add_executable(GPS_ONE
         main.cpp
         external/minmea/minmea.c
+        UDP/UDP_Receiver.cpp
+        UDP/UDP_Receiver.h
 )
 
 target_include_directories(GPS_ONE PRIVATE external/minmea)
