@@ -68,12 +68,32 @@ std::string UDP_Receiver::ReceiveMessage() const
 void UDP_Receiver::UDP_ReceiverService() const
 {
     printf("UDP Receiver Running on PORT: %d\n", port);
+
+    // Counters
+    int NMEASentenceCounter = 0;
+    int invalidNMEASentenceCounter = 0;
+
     while (true) {
-        std:: string message = ReceiveMessage();
+        const std:: string message = ReceiveMessage();
 
         //PARSE GGA MESSAGE
         nmea NMEA(message);
-        minmea_sentence_gga parsedGGASentance = NMEA.nmeaGGA();
+        NMEAResult result = NMEA.parseNMEASentance();
+        if (result.valid == false) {
+            invalidNMEASentenceCounter++;
+        }
+        minmea_sentence_gga parsedGGASentence = NMEA.nmeaGGA();
+
+        if (result.valid == true && result.sentence_type == NMEASentenceEnum::GGA) {
+            NMEASentenceCounter++;
+        }
+        // NMEASentenceCounter++;
+
+        std::cout << "Total NMEA Sentences: " << NMEASentenceCounter <<std::endl;
+        std::cout << "Invalid NMEA Sentences: " << invalidNMEASentenceCounter <<std::endl;
+        if (NMEASentenceCounter > 0) {
+            std::cout << "Invalid Percentage: " << (invalidNMEASentenceCounter / NMEASentenceCounter) * 100 << "%"<<std::endl;
+        }
     }
 }
 
