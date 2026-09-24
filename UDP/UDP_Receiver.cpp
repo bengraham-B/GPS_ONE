@@ -6,6 +6,12 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <stdio.h>
+#include <errno.h>
+#include <netdb.h>
+#include <linux/if.h>
+#include <sys/ioctl.h>
+#include <cstring>
 
 #include "UDP_Receiver.h"
 
@@ -14,6 +20,7 @@
 // Constructor
 UDP_Receiver::UDP_Receiver(int port) {
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+    this->port = port; // save constructor argument into the field;
 
     if (sockfd < 0)
     {
@@ -43,5 +50,42 @@ std::string UDP_Receiver::ReceiveMessage()
         throw std::runtime_error("Error receiving message");
     }
 
-    return std::string(buffer, n);
+    // return std::string(buffer, n);
+
+    std::string message(buffer, n);
+
+    //TRrim trailing \r and \n characters (NMEA sentences end with \r\n)
+    while (!message.empty() && (message.back() == '\r' || message.back() == '\n')) {
+        message.pop_back();
+    }
+
+    return message;
+
+}
+
+void UDP_Receiver::UDP_ReceiverService()
+{
+    printf("UDP Receiver Running on PORT: %d\n", port);
+    while (true) {
+        std:: string message = ReceiveMessage();
+        std::cout << message << std::endl;
+    }
+}
+
+std::string UDP_Receiver::GetIPAddress()
+{
+    int fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_IP);
+
+    struct ifreq ifr{};
+    strcpy(ifr.ifr_name, "wlo1");
+    ioctl(fd, SIOCGIFADDR, &ifr);
+    close(fd);
+
+    char ip[INET_ADDRSTRLEN];
+    strcpy(ip, inet_ntoa(((sockaddr_in *) &ifr.ifr_addr)->sin_addr));
+
+    std::cout << ip << std::endl;
+
+    return ip;
+
 }

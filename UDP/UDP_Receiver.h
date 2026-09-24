@@ -13,9 +13,13 @@ class UDP_Receiver {
     public:
         UDP_Receiver(int port);
         std::string ReceiveMessage(); // std::string -> string type from standard library
+        void UDP_ReceiverService();
+
+        static std::string GetIPAddress(); // Gets the PC IP Address
 
     private:
         int sockfd; // Holds our network socket (Integer ID), which our OS gives us
+        int port;
 };
 
 
