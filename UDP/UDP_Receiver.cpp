@@ -14,6 +14,8 @@
 #include <cstring>
 
 #include "UDP_Receiver.h"
+#include "../minmea/minmea.h"
+#include "../NMEA/nmea.h"
 
 #define MAXLINE 1024
 
@@ -38,13 +40,13 @@ UDP_Receiver::UDP_Receiver(int port) {
     }
 }
 
-std::string UDP_Receiver::ReceiveMessage()
+std::string UDP_Receiver::ReceiveMessage() const
 {
     char buffer[MAXLINE];
     sockaddr_in cliaddr{};
     socklen_t len = sizeof(cliaddr);
 
-    int n = recvfrom(sockfd, buffer, MAXLINE, 0, (sockaddr*)&cliaddr, &len);
+    const int n = recvfrom(sockfd, buffer, MAXLINE, 0, (sockaddr*)&cliaddr, &len);
     if ( n < 0)
     {
         throw std::runtime_error("Error receiving message");
@@ -54,7 +56,7 @@ std::string UDP_Receiver::ReceiveMessage()
 
     std::string message(buffer, n);
 
-    //TRrim trailing \r and \n characters (NMEA sentences end with \r\n)
+    //Trim trailing \r and \n characters (NMEA sentences end with \r\n)
     while (!message.empty() && (message.back() == '\r' || message.back() == '\n')) {
         message.pop_back();
     }
@@ -63,18 +65,21 @@ std::string UDP_Receiver::ReceiveMessage()
 
 }
 
-void UDP_Receiver::UDP_ReceiverService()
+void UDP_Receiver::UDP_ReceiverService() const
 {
     printf("UDP Receiver Running on PORT: %d\n", port);
     while (true) {
         std:: string message = ReceiveMessage();
-        std::cout << message << std::endl;
+
+        //PARSE GGA MESSAGE
+        nmea NMEA(message);
+        minmea_sentence_gga parsedGGASentance = NMEA.nmeaGGA();
     }
 }
 
 std::string UDP_Receiver::GetIPAddress()
 {
-    int fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_IP);
+    const int fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_IP);
 
     struct ifreq ifr{};
     strcpy(ifr.ifr_name, "wlo1");

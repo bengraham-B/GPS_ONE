@@ -8,6 +8,8 @@ add_executable(GPS_ONE
         external/minmea/minmea.c
         UDP/UDP_Receiver.cpp
         UDP/UDP_Receiver.h
+        NMEA/nmea.cpp
+        NMEA/nmea.h
 )
 
 target_include_directories(GPS_ONE PRIVATE external/minmea)
