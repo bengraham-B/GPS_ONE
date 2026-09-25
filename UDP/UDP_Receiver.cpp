@@ -14,7 +14,7 @@
 #include <cstring>
 
 #include "UDP_Receiver.h"
-#include "../minmea/minmea.h"
+#include "../external/minmea/minmea.h" // GitHub NMEA Project
 #include "../NMEA/nmea.h"
 
 #define MAXLINE 1024

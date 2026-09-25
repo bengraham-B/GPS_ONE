@@ -1,35 +1,30 @@
+# Unlike the libraries above, this builds an actual runnable program —
+# tests need to be something you can execute, not just link into other code.
+
+# Compile Counter_Test.cpp into a binary called "UDP_Tests".
+# (UDP_tests.h gets pulled in automatically via #include inside
+# Counter_Test.cpp — you never need to list header files separately here.)
 add_executable(UDP_Tests UDP_Tests/Counter_Test.cpp)
+
+# Lets Counter_Test.cpp do #include "UDP_tests.h" without a relative path.
+# PRIVATE here (not PUBLIC) because nothing ever links against UDP_Tests
+# afterward — it's the final product, so there's no "downstream" target
+# that would need this setting passed along.
 target_include_directories(UDP_Tests PRIVATE UDP_Tests)
+
+# Everything UDP_Tests needs to compile and run:
 target_link_libraries(UDP_Tests
-    PRIVATE
-        UDP
-        NMEA
-        gtest
-        gtest_main
+        PRIVATE
+        UDP        # the code under test — also pulls in NMEA + minmea transitively
+        NMEA       # listed explicitly too, in case Counter_Test.cpp uses NMEA directly
+        gtest      # the GoogleTest framework itself
+        gtest_main # provides main() for us automatically, so we don't write our own runner
 )
 
+# Pulls in CMake's built-in helper functions for GoogleTest integration.
 include(GoogleTest)
-gtest_discover_tests(UDP_Tests)
 
-#include(FetchContent)
-#FetchContent_Declare(
-#        googletest
-#        URL https://github.com/google/googletest/archive/refs/tags/v1.15.2.zip
-#)
-#
-## For Windows: Prevent overriding the parent project's compilier Linker settings
-#set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-#FetchContent_MakeAvailable(googletest)
-#
-#add_executable(UDP_Tests UDP_Tests/Counter_Test.cpp)
-#
-#target_include_directories(UDP_Tests PRIVATE UDP_Tests)
-#target_link_libraries(UDP_Tests
-#    PRIVATE
-#        GPS_ONE
-#        gtest
-#        gtest_main
-#)
-#
-#include(GoogleTest)
-#gtest_discover_tests(UDP_Tests)
+# After UDP_Tests is built, scan it and register each individual TEST(...)
+# as its own separate CTest entry — so `ctest`, or CLion's test runner,
+# can run and report each test individually rather than as one big blob.
+gtest_discover_tests(UDP_Tests)

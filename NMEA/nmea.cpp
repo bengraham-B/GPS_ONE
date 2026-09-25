@@ -1,12 +1,9 @@
-//
-// Created by ben on 2026/09/24.
-//
 
 #include "nmea.h"
 
 #include <iostream>
 
-#include "../external/minmea/minmea.h" // GitHub NMEA Project
+#include "../external/minmea/minmea.h" // GitHub MINMEA Project
 
 // Constructor
 nmea::nmea(std::string message)
