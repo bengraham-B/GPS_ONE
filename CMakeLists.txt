@@ -3,14 +3,19 @@ project(GPS_ONE)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_executable(GPS_ONE
-        main.cpp
-        external/minmea/minmea.c
-        UDP/UDP_Receiver.cpp
-        UDP/UDP_Receiver.h
-        NMEA/nmea.cpp
-        NMEA/nmea.h
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/refs/tags/v1.15.2.zip
 )
+FetchContent_MakeAvailable(googletest)
 
-target_include_directories(GPS_ONE PRIVATE external/minmea)
-target_link_libraries(GPS_ONE m)
+add_subdirectory(external/minmea)
+add_subdirectory(NMEA)
+add_subdirectory(UDP)
+
+add_executable(GPS_ONE main.cpp)
+target_link_libraries(GPS_ONE PRIVATE UDP NMEA)
+
+enable_testing()
+add_subdirectory(Test)
