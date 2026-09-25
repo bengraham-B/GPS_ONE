@@ -14,10 +14,12 @@ nmea::nmea(std::string message)
 NMEAResult nmea::parseNMEASentance()
 {
     NMEAResult result{};
+    result.valid = false;
 
     // Switch Statement to Handle Diff Sentences
     switch (minmea_sentence_id(message.c_str(), false))
     {
+
         case MINMEA_SENTENCE_GGA:
         {
             minmea_sentence_gga GGA{}; // empty struct which Valid GGA sentences values will be passed to.
@@ -30,12 +32,12 @@ NMEAResult nmea::parseNMEASentance()
                 return result;
             }
 
-            if (minmea_parse_gga(&GGA, message.c_str())) {
-                printGGA(GGA);
-                // Returns valid GGA Sentence
+            if (minmea_parse_gga(&GGA, message.c_str()))
+            {
+                // printGGA(GGA);
                 result.valid = true;
                 result.GGA = GGA;
-                return result;
+                return result; // Returns valid GGA Sentence
             }
             break;
         }

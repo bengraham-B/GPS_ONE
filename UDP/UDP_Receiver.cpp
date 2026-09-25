@@ -17,6 +17,8 @@
 #include "../external/minmea/minmea.h" // GitHub NMEA Project
 #include "../NMEA/nmea.h"
 
+using namespace std;
+
 #define MAXLINE 1024
 
 // Constructor
@@ -78,11 +80,12 @@ void UDP_Receiver::UDP_ReceiverService() const
 
         //PARSE GGA MESSAGE
         nmea NMEA(message);
-        NMEAResult result = NMEA.parseNMEASentance();
+        const NMEAResult result = NMEA.parseNMEASentance(); // Validates on CheckSum an returns a parsed NMEA sentence
         if (result.valid == false) {
             invalidNMEASentenceCounter++;
         }
-        minmea_sentence_gga parsedGGASentence = NMEA.nmeaGGA();
+
+        // minmea_sentence_gga parsedGGASentence = NMEA.nmeaGGA(); // <-- Look if thus can be removed
 
         if (result.valid == true && result.sentence_type == NMEASentenceEnum::GGA) {
             NMEASentenceCounter++;

@@ -27,4 +27,4 @@ include(GoogleTest)
 # After UDP_Tests is built, scan it and register each individual TEST(...)
 # as its own separate CTest entry — so `ctest`, or CLion's test runner,
 # can run and report each test individually rather than as one big blob.
-gtest_discover_tests(UDP_Tests)
+gtest_discover_tests(UDP_Tests) # Actual Directory of my tests Test/UDP_TESTS
