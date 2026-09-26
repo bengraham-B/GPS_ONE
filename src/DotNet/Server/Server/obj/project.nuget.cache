@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "bzwxVMD5aeY=",
+  "success": true,
+  "projectFilePath": "/home/ben/Projects/AEG/GPS_ONE/src/DotNet/Server/Server/Server.csproj",
+  "expectedPackageFiles": [
+    "/home/ben/.nuget/packages/fsharp.core/10.1.301/fsharp.core.10.1.301.nupkg.sha512",
+    "/home/ben/.nuget/packages/microsoft.aspnetcore.openapi/10.0.12/microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "/home/ben/.nuget/packages/microsoft.extensions.dependencymodel/10.0.0/microsoft.extensions.dependencymodel.10.0.0.nupkg.sha512",
+    "/home/ben/.nuget/packages/microsoft.openapi/2.12.0/microsoft.openapi.2.12.0.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog/4.3.1/serilog.4.3.1.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.aspnetcore/10.0.1-dev-02312/serilog.aspnetcore.10.0.1-dev-02312.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.extensions.hosting/10.0.0/serilog.extensions.hosting.10.0.0.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.extensions.logging/10.0.0/serilog.extensions.logging.10.0.0.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.formatting.compact/3.0.0/serilog.formatting.compact.3.0.0.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.settings.configuration/10.0.0/serilog.settings.configuration.10.0.0.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.sinks.console/6.1.1/serilog.sinks.console.6.1.1.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.sinks.debug/3.0.0/serilog.sinks.debug.3.0.0.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.sinks.file/7.0.0/serilog.sinks.file.7.0.0.nupkg.sha512",
+    "/home/ben/.nuget/packages/serilog.sinks.grafana.loki/9.0.2/serilog.sinks.grafana.loki.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
