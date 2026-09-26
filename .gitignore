@@ -1,7 +1,76 @@
-**/bin/
-**/obj/
-bin/
-obj/
+##################################################
+# C++
+##################################################
 
-# git rm -r --cached src/DotNet/Server/Server/bin
-# git rm -r --cached src/DotNet/Server/Server/obj
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.slo
+*.ko
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Compiled dynamic/shared libraries
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Compiled static libraries
+*.a
+*.la
+*.lai
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug/build symbols
+*.pdb
+*.ilk
+*.idb
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+build/
+cmake-build-*/
+
+# Makefile-generated
+Makefile
+*.mk
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+
+# vcpkg
+vcpkg_installed/
+
+# Conan
+conanbuildinfo.*
+conaninfo.txt
+conan.lock
+
+# VS Code (C++ specific, if not already covered elsewhere)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# clangd / clang-tidy caches
+.cache/
+.clangd/
