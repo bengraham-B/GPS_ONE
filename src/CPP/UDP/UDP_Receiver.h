@@ -8,10 +8,11 @@
 #pragma once // prevents the file from being included twice by accident
 #include <string> // Pulls in string type
 
-class UDP_Receiver {
+class UDP_Receiver
+{
 
     public:
-        UDP_Receiver(int port);
+    explicit UDP_Receiver(int port);
         std::string ReceiveMessage() const; // std::string -> string type from standard library
         void UDP_ReceiverService() const;
 
@@ -22,5 +23,18 @@ class UDP_Receiver {
         int port;
 };
 
+
+class UDP_Sends
+{
+public:
+    UDP_Sends(int port, std::string serverURL, std::string message);
+    void SendMessage() const;
+
+private:
+    int sockfd;
+    int port;
+    std::string serverURL;
+    std::string message;
+};
 
 #endif //GPS_ONE_UDP_RECEIVER_H

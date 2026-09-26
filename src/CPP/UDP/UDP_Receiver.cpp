@@ -14,7 +14,6 @@
 #include <cstring>
 
 #include "UDP_Receiver.h"
-#include "../external/minmea/minmea.h" // GitHub NMEA Project
 #include "../NMEA/nmea.h"
 
 using namespace std;
@@ -87,10 +86,14 @@ void UDP_Receiver::UDP_ReceiverService() const
 
         // minmea_sentence_gga parsedGGASentence = NMEA.nmeaGGA(); // <-- Look if thus can be removed
 
-        if (result.valid == true && result.sentence_type == NMEASentenceEnum::GGA) {
+        if (result.valid == true && result.sentence_type == NMEASentenceEnum::GGA)
+        {
             NMEASentenceCounter++;
+
+            // Stream to Dotnet
+            UDP_Sends sends(5005, "127.0.0.1", result.sentence);
+            sends.SendMessage();
         }
-        // NMEASentenceCounter++;
 
         std::cout << "Total NMEA Sentences: " << NMEASentenceCounter <<std::endl;
         std::cout << "Invalid NMEA Sentences: " << invalidNMEASentenceCounter <<std::endl;
