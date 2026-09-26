@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="4" type="long" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81be12c7-0e94-4609-9b23-bde03b102d28" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GPS_ONE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/GPS_ONE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Application_Overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/Application_Overview.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/CMake/CMake_Ref.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/CMake/CMake_Ref.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/CMake/GPS_ONE_CMake.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/CMake/GPS_ONE_CMake.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Header/Header.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/Header/Header.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Intalled.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/Intalled.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/NMEA.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/NMEA.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/SubModule_git.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/SubModule_git.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Testing.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/Testing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/UDP.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Docs/UDP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NMEA/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/NMEA/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NMEA/nmea.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/NMEA/nmea.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NMEA/nmea.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/NMEA/nmea.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Test/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/UDP_Tests/Counter_Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/Test/UDP_Tests/Counter_Test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/UDP/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP/UDP_Receiver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/UDP/UDP_Receiver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UDP/UDP_Receiver.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/UDP/UDP_Receiver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external/minmea" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/external/minmea" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/CPP/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="atmxshG0" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2026" />
+    <option name="minorVersion" value="2.2" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3JllzLJ3eWHVoq2bSftI2x34uk1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.GPS_ONE.executor": "Run",
+    "CMake Application.tests.executor": "Run",
+    "CidrDebugProfileConversion": "true",
+    "Google Test.NMEACounter_Tests.test_GGA_sentence_validity.executor": "Run",
+    "Google Test.UDP_Tests.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "ctest.advertisement.all.test.configuration.is.created": "true",
+    "git-widget-placeholder": "file-structure",
+    "last_opened_file_path": "/home/ben/Projects/AEG/GPS_ONE/src/CPP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/ben/Projects/AEG/GPS_ONE/main.cpp",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "preferences.editor"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Test/UDP_Tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Google Test.NMEACounter_Tests.test_GGA_sentence_validity">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NMEACounter_Tests.test_GGA_sentence_validity" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="UDP_Tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="UDP_Tests" TEST_CLASS="NMEACounter_Tests" TEST_METHOD="test_GGA_sentence_validity" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="Google Test.NMEACounter_Tests.test_GGA_sentence_validity" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.NMEACounter_Tests.test_GGA_sentence_validity" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SelectedDebugProfileService">{
+  &quot;profileIdByStamp&quot;: [],
+  &quot;modificationCount&quot;: 9
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81be12c7-0e94-4609-9b23-bde03b102d28" name="Changes" comment="" />
+      <created>1790243796139</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790243796139</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+    <isAutomaticBootstrapAfterUpdate value="false" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="counter" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="counter" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

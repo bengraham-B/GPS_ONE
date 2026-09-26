@@ -1,3 +1,3 @@
 [submodule "external/minmea"]
-	path = external/minmea
+	path = src/CPP/external/minmea
 	url = https://github.com/kosma/minmea.git
