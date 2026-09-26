@@ -1,6 +1,7 @@
 **/bin/
 **/obj/
 bin/
+obj/
 
-src/DotNet/Server/bin
-src/DotNet/Server/obj
+# git rm -r --cached src/DotNet/Server/Server/bin
+# git rm -r --cached src/DotNet/Server/Server/obj
