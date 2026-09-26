@@ -15,6 +15,7 @@ enum class NMEASentenceEnum
 struct NMEAResult
 {
     minmea_sentence_gga GGA{};
+    std::string sentence;
     NMEASentenceEnum sentence_type {NMEASentenceEnum::UNKNOWN};
     bool valid = true;
 };

@@ -1,6 +1,9 @@
 # Same pattern — UDP/ becomes its own library.
 
-add_library(UDP STATIC UDP_Receiver.cpp)
+add_library(UDP STATIC
+        UDP_Receiver.cpp
+        UDP_Sends.cpp
+)
 
 # Lets anything linking UDP do #include "UDP_Receiver.h" directly.
 target_include_directories(UDP PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

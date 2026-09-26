@@ -37,6 +37,7 @@ NMEAResult nmea::parseNMEASentance()
                 // printGGA(GGA);
                 result.valid = true;
                 result.GGA = GGA;
+                result.sentence = message;
                 return result; // Returns valid GGA Sentence
             }
             break;
