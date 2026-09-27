@@ -1,5 +1,6 @@
 using Serilog;
 using Serilog.Sinks.Grafana.Loki;
+using Server.Hubs;
 using Server.Services; // This is the UDP Service
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,11 +23,25 @@ builder.Host.UseSerilog((context, services, configuration) =>
         );
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AngularClient", policy =>
+    {
+        policy.WithOrigins("http://localhost:3300")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials(); // Required for SignalR's websocket
+    });
+});
+
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
 builder.Services.AddHostedService<UDPReceiveService>(); // <-- When ASP.Net runs, teh UDP Receives Service will also run
 
 
 var app = builder.Build();
+app.UseRouting();
+app.UseCors("AngularClient");
+app.MapHub<WebAppHub>("/webapphub").RequireCors("AngularClient");
 app.MapControllers();
 app.Run();

@@ -1,6 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Sockets;
 using System.Text;
+using Microsoft.AspNetCore.SignalR;
+using Server.Hubs;
 
 /*
  * Background Services
@@ -16,13 +18,17 @@ public class UDPReceiveService : BackgroundService
     // Injecting the Logger
     private readonly ILogger<UDPReceiveService> _logger;
     
+    // IHubContect<WebAppHub> is the outside way to takl to the hub's clients (SignalR)
+    private readonly IHubContext<WebAppHub> _hubContext;
+    
     // Port the UPD Receiver will listen on.
     private const int port = 5005;
     
     // Constructor - DI Supplies the logger automatically because this class is registered via AddHostedService<UdpReceiverService>() in program.cs
-    public UDPReceiveService(ILogger<UDPReceiveService> logger)
+    public UDPReceiveService(ILogger<UDPReceiveService> logger, IHubContext<WebAppHub> hubContext)
     {
         _logger = logger;
+        _hubContext = hubContext;
     }
     
     /*
@@ -39,6 +45,8 @@ public class UDPReceiveService : BackgroundService
         using var UDPClient = new UdpClient(port);
         
         _logger.LogInformation("UPD Receiver listening on Port: {port}", port); // This logs once on startup
+        
+        
 
         /*
          * Main UDP Receive Loop
@@ -60,6 +68,9 @@ public class UDPReceiveService : BackgroundService
                 // Result.Buffer is the raw bytes received in this one packet .
                 // UDP is message based, so each ReceiveAsync call gives you exactly one datagram as it was sent - no manual framing needed.
                 string message = Encoding.UTF8.GetString(result.Buffer);
+                
+                // -------- Sending to Connected Clients (WebApps | SignalR) -------------
+                await _hubContext.Clients.All.SendAsync("ReceiveMessage", result.RemoteEndPoint.ToString(), message, stoppingToken);
 
                 /* Result.RemoteEdnPoint - tells us who sent the packet (IP + PORT)
                  * The {Placeholder} syntax is structured logging, each value becomes its own labeld field in the log output.
