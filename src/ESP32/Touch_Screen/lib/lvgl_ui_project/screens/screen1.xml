@@ -1,0 +1,11 @@
+<screen>
+	<view extends="lv_obj">
+		<lv_button style_text_align="center" x="113" y="102" width="89" height="29">
+			<style name="btn" />
+			<lv_label text="Press" align="center" width="80" height="16" />
+		</lv_button>
+	</view>
+	<styles>
+		<style name="btn" radius="5" pad_all="4" bg_color="0xf59e0b" text_color="0x000000" />
+	</styles>
+</screen>
